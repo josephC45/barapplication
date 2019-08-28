@@ -33,6 +33,7 @@ namespace Bar.Controllers
             }
 
             var order = await _context.Order
+                .Include(m => m.BarMenu)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (order == null)
             {
@@ -43,9 +44,11 @@ namespace Bar.Controllers
         }
 
         // GET: Orders/Create
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
-            return View();
+            OrderViewModel OrderViewModel = new OrderViewModel();
+            OrderViewModel.BarMenu = _context.BarMenu.FirstOrDefault(m => m.ID == id);
+            return View(OrderViewModel);
         }
 
         // POST: Orders/Create
