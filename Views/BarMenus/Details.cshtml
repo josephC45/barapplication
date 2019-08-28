@@ -1,13 +1,12 @@
 ﻿@model Bar.Models.BarMenu
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Drink Details Page";
 }
 
-<h1>Details</h1>
+<h1>Drink Details</h1>
 
 <div>
-    <h4>BarMenu</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -31,6 +30,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Back to Menu</a>
 </div>
