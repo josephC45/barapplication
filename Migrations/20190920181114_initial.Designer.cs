@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bar.Migrations
 {
     [DbContext(typeof(BarContext))]
-    [Migration("20190827202622_initial")]
+    [Migration("20190920181114_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,8 @@ namespace Bar.Migrations
 
                     b.Property<decimal>("Price");
 
+                    b.Property<int>("Quantity");
+
                     b.HasKey("ID");
 
                     b.ToTable("BarMenu");
@@ -46,6 +48,10 @@ namespace Bar.Migrations
                     b.Property<string>("CustomerName");
 
                     b.Property<int>("MenuID");
+
+                    b.Property<int>("QuantityOfBeers");
+
+                    b.Property<decimal>("Total");
 
                     b.HasKey("ID");
 

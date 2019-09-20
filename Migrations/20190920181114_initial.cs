@@ -15,7 +15,8 @@ namespace Bar.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DrinkName = table.Column<string>(nullable: true),
                     DrinkDescription = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(nullable: false)
+                    Price = table.Column<decimal>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,7 +30,9 @@ namespace Bar.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CustomerName = table.Column<string>(nullable: true),
-                    MenuID = table.Column<int>(nullable: false)
+                    MenuID = table.Column<int>(nullable: false),
+                    QuantityOfBeers = table.Column<int>(nullable: false),
+                    Total = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {

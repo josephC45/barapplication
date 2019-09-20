@@ -1,0 +1,21 @@
+﻿body {
+}
+
+.parallax {
+    background-image: url("/Images/BreweryIMG.jfif");
+    height: 700px;
+    width: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#text-block {
+    background-color: dimgrey;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}

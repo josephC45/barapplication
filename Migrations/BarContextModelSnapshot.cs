@@ -30,6 +30,8 @@ namespace Bar.Migrations
 
                     b.Property<decimal>("Price");
 
+                    b.Property<int>("Quantity");
+
                     b.HasKey("ID");
 
                     b.ToTable("BarMenu");
@@ -44,6 +46,10 @@ namespace Bar.Migrations
                     b.Property<string>("CustomerName");
 
                     b.Property<int>("MenuID");
+
+                    b.Property<int>("QuantityOfBeers");
+
+                    b.Property<decimal>("Total");
 
                     b.HasKey("ID");
 

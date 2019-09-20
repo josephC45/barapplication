@@ -22,17 +22,36 @@ namespace Bar.Models
                 context.BarMenu.AddRange(
                     new BarMenu
                     {
+
                         DrinkName = "Natural Light",
                         DrinkDescription = "It's pretty gross.",
                         Price = 2.00M
-                    },
 
-                  new BarMenu
-                  {
-                      DrinkName = "Yuengling",
-                      DrinkDescription = "Creamy taste with tones of chocolate.",
-                      Price = 3.00M
-                  }
+                    },
+                    new BarMenu
+                    {
+                        DrinkName = "PBR",
+                        DrinkDescription = "Hipster beer",
+                        Price = 2.00M
+                    },
+                    new BarMenu
+                    {
+                        DrinkName = "Yuenling",
+                        DrinkDescription = "American Beer",
+                        Price = 2.25M
+                    },
+                    new BarMenu
+                    {
+                        DrinkName = "Heineken",
+                        DrinkDescription = "I have no idea how it tastes",
+                        Price = 2.50M
+                    },
+                    new BarMenu
+                    {
+                        DrinkName = "Stella Artois",
+                        DrinkDescription = "It's pretty good",
+                        Price = 3.50M
+                    }
                 );
                 context.SaveChanges();
             }

@@ -16,6 +16,12 @@ namespace Bar.Models
         [Display(Name = "Menu Item ID")]
         public int MenuID { get; set; }
 
+        [Display(Name = "Quantity")]
+        public int QuantityOfBeers { get; set; }
+
+        [DataType(DataType.Currency)]
+        public decimal Total { get; set; }
+
         [ForeignKey("MenuID")]
         public BarMenu BarMenu { get; set; }
     }

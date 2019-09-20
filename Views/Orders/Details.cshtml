@@ -10,18 +10,35 @@
     <h4>Order</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CustomerName)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CustomerName)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BarMenu.DrinkName)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.BarMenu.DrinkName)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QuantityOfBeers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QuantityOfBeers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.QuantityOfBeers > 1)
+            {
+                Model.Total = Model.BarMenu.Price * Model.QuantityOfBeers;
+            }
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
     </dl>
 </div>
 <div>
