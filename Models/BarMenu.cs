@@ -16,6 +16,7 @@ namespace Bar.Models
         [Display(Name = "Description")]
         public string DrinkDescription { get; set; }
 
+        [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
         public int Quantity { get; set; }

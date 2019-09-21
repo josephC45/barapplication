@@ -1,15 +1,12 @@
-﻿body {
-    background-color: black;
+﻿.ParaImage {
+    background-image: url("/Images/pub.jpg");
+    background-size: cover;
 }
-
 .parallax {
-    background-image: url("/Images/BreweryIMG.jfif");
-    height: 700px;
-    width: 1000px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover
+   
 }
 
 #text-block {
